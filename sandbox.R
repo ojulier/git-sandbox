@@ -1,3 +1,7 @@
 library(tidyverse)
+library(rvest)
 
-# This is my first commit
+url <- "https://www.unilu.ch/"
+page <- read_html(url)
+
+page_get <- httr::GET(url)
